@@ -41,15 +41,27 @@
 #       - name : printing env Variable
 #         run : echo "Hello $Name"
 
-name: manual trigger 
+# name: manual trigger 
 
-on:
-  workflow_dispatch:
+# on:
+#   workflow_dispatch:
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Manual trigger
+#         run: echo "Manual execution triggered"
+
+name : print date
+
+on : push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build : 
+  runs-on : ubuntu-latest
 
-    steps:
-      - name: Manual trigger
-        run: echo "Manual execution triggered"
+  steps:
+   -name : printing date
+    runs : date
