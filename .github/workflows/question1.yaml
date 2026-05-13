@@ -26,17 +26,30 @@
 #         run : echo "build complete"
 
 
-name : Environment Variable
+# name : Environment Variable
 
-on : push
+# on : push
 
-env:
-  Name : Vaibhavi
+# env:
+#   Name : Vaibhavi
 
-jobs :
+# jobs :
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name : printing env Variable
+#         run : echo "Hello $Name"
+
+name: manual trigger 
+
+on:
+  workflow_dispatch:
+
+jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name : printing env Variable
-        run : echo "Hello $Name"
+      - name: Manual trigger
+        run: echo "Manual execution triggered"
