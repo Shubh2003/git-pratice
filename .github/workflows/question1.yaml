@@ -1,12 +1,26 @@
 # Create a workflow that runs on push and prints "Hello World"
-name : question 1
+# name : question 1
 
+# on : push
+
+# jobs:   
+#   build: 
+#    runs-on : ubuntu-latest
+
+#    steps:
+#      - name : printing
+#        run : echo "Hello World"
+
+
+name : two steps workflow 
 on : push
+jobs: 
+  build:
+    runs-on: ubuntu-latest
 
-jobs:   
-  build: 
-   runs-on : ubuntu-latest
+    steps:
+      - name : start build
+        run : echo "Starting build"
 
-   steps:
-     - name : printing
-       run : echo "Hello World"
+      - name : complete build
+        run : echo "build complete"
