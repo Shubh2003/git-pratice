@@ -63,5 +63,5 @@ jobs:
   runs-on : ubuntu-latest
 
   steps:
-   -name : printing date
-    runs : date
+   - name : printing date
+     run : date
