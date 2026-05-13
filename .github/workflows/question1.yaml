@@ -60,8 +60,8 @@ on : push
 
 jobs:
   build : 
-  runs-on : ubuntu-latest
+    runs-on : ubuntu-latest
 
-  steps:
-   - name : printing date
-     run : date
+    steps:
+      - name : printing date
+        run : date
