@@ -12,15 +12,31 @@
 #        run : echo "Hello World"
 
 
-name : two steps workflow 
+# name : two steps workflow 
+# on : push
+# jobs: 
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name : start build
+#         run : echo "Starting build"
+
+#       - name : complete build
+#         run : echo "build complete"
+
+
+name : Environment Variable
+
 on : push
-jobs: 
+
+env:
+  Name : Vaibhavi
+
+jobs :
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name : start build
-        run : echo "Starting build"
-
-      - name : complete build
-        run : echo "build complete"
+      - name : printing env Variable
+        run : echo "Hello $Name"
