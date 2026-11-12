@@ -54,14 +54,26 @@
 #       - name: Manual trigger
 #         run: echo "Manual execution triggered"
 
-name : print date
+# name : print date
 
-on : push
+# on : push
 
-jobs:
+# jobs:
+#   build : 
+#     runs-on : ubuntu-latest
+
+#     steps:
+#       - name : printing date
+#         run : date
+
+name : pull request
+
+on: pull_request
+
+jobs :
   build : 
     runs-on : ubuntu-latest
 
-    steps:
-      - name : printing date
-        run : date
+    steps :
+      - name : PR validation
+        run : echo "PR"
